@@ -5,7 +5,7 @@ APP=obs-studio
 BIN="obs"
 QTVER=$(curl -Ls https://archlinux.org/packages/extra/x86_64/obs-studio/ | tr '"><' '\n' | grep "^qt.*svg$" | head -1)
 [ "$QTVER" = qt5-svg ] && kvantumver="kvantum-qt5 qt5ct" || kvantumver="kvantum qt6ct"
-DEPENDENCES="ca-certificates python libuiohook luajit libfdk-aac xapp $kvantumver"
+DEPENDENCES="ca-certificates python libuiohook luajit libfdk-aac xapp $kvantumver wayland pipewire"
 #BASICSTUFF="binutils debugedit gzip"
 #COMPILERS="base-devel"
 

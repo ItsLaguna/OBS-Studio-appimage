@@ -5,7 +5,11 @@ APP=obs-studio-browser
 BIN="obs"
 QTVER=$(curl -Ls https://archlinux.org/packages/extra/x86_64/obs-studio/ | tr '"><' '\n' | grep "^qt.*svg$" | head -1)
 [ "$QTVER" = qt5-svg ] && kvantumver="kvantum-qt5 qt5ct" || kvantumver="kvantum qt6ct"
-DEPENDENCES="ca-certificates python libuiohook luajit libfdk-aac xapp $kvantumver"
+DEPENDENCES="ca-certificates dbus \
+alsa-lib alsa-oss alsa-plugins alsa-tools alsa-utils jack2 \
+pulseaudio pulseaudio-alsa libpulse libsndfile libasyncns libogg libvorbis flac opus mpg123 lame \
+libpipewire pipewire pipewire-alsa pipewire-audio pipewire-pulse wireplumber \
+python libuiohook luajit libfdk-aac xapp $kvantumver"
 BASICSTUFF="binutils debugedit gzip"
 COMPILERS="base-devel"
 

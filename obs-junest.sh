@@ -8,7 +8,7 @@ QTVER=$(curl -Ls https://archlinux.org/packages/extra/x86_64/obs-studio/ | tr '"
 DEPENDENCES="ca-certificates dbus \
 alsa-lib alsa-oss alsa-plugins alsa-tools alsa-utils jack2 \
 pulseaudio pulseaudio-alsa libpulse libsndfile libasyncns libogg libvorbis flac opus mpg123 lame \
-libpipewire pipewire pipewire-alsa pipewire-audio pipewire-pulse wireplumber \
+pipewire pipewire-alsa pipewire-audio pipewire-pulse wireplumber \
 python libuiohook luajit libfdk-aac xapp $kvantumver"
 #BASICSTUFF="binutils debugedit gzip"
 #COMPILERS="base-devel"
